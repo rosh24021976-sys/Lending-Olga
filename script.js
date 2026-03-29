@@ -4,6 +4,7 @@
   const root = document.documentElement;
   const toggle = document.getElementById("themeToggle");
   const year = document.getElementById("year");
+  const revealEls = Array.from(document.querySelectorAll(".reveal"));
 
   function prefersDark() {
     return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -36,5 +37,23 @@
   }
 
   if (year) year.textContent = String(new Date().getFullYear());
+
+  const reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!reducedMotion && revealEls.length) {
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            io.unobserve(entry.target);
+          }
+        }
+      },
+      { threshold: 0.15, rootMargin: "0px 0px -10% 0px" },
+    );
+    for (const el of revealEls) io.observe(el);
+  } else {
+    for (const el of revealEls) el.classList.add("is-visible");
+  }
 })();
 
