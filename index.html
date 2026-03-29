@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Ольга — AI‑дизайнер</title>
+    <meta
+      name="description"
+      content="Ольга — AI‑дизайнер и дипломированный специалист. Концепты, визуалы, баннеры и упаковка под ключ. Портфолио в Telegram."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти к содержанию</a>
+
+    <header class="header">
+      <div class="container header__inner">
+        <a class="brand" href="#top" aria-label="На главную">
+          <span class="brand__dot" aria-hidden="true"></span>
+          <span class="brand__text">Ольга · AI‑дизайнер</span>
+        </a>
+
+        <nav class="nav" aria-label="Навигация">
+          <a class="nav__link" href="#about">Обо мне</a>
+          <a class="nav__link" href="#services">Услуги</a>
+          <a class="nav__link" href="#process">Процесс</a>
+          <a class="nav__link" href="#portfolio">Портфолио</a>
+          <a class="nav__link" href="#contacts">Контакты</a>
+        </nav>
+
+        <div class="header__actions">
+          <button
+            id="themeToggle"
+            class="btn btn--ghost"
+            type="button"
+            aria-label="Переключить тему"
+            aria-pressed="false"
+            title="Тема"
+          >
+            <span class="btn__icon" aria-hidden="true">
+              <svg class="icon icon--sun" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <path
+                  d="M12 2v2M12 20v2M4 12H2M22 12h-2M5.6 5.6 4.2 4.2M19.8 19.8l-1.4-1.4M18.4 5.6l1.4-1.4M4.2 19.8l1.4-1.4"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <svg class="icon icon--moon" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M21 14.5A8.5 8.5 0 0 1 9.5 3a6.5 6.5 0 1 0 11.5 11.5Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+            <span class="btn__text">Тема</span>
+          </button>
+          <a class="btn btn--primary" href="#contacts">Написать</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section id="top" class="hero">
+        <div class="container hero__inner">
+          <div class="hero__content">
+            <p class="badge">
+              <span class="badge__dot" aria-hidden="true"></span>
+              AI‑дизайн · визуальные концепты · маркетинг
+            </p>
+            <h1 class="hero__title">
+              Ольга — AI‑дизайнер, дипломированный специалист
+            </h1>
+            <p class="hero__subtitle">
+              Помогаю брендам и экспертам быстро получать сильные визуалы: от
+              креативных концептов до готовых материалов для соцсетей и рекламы.
+            </p>
+
+            <div class="hero__cta">
+              <a class="btn btn--primary" href="#portfolio">Смотреть портфолио</a>
+              <a
+                class="btn btn--ghost"
+                href="https://t.me/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Портфолио в Telegram
+              </a>
+            </div>
+
+            <dl class="stats" aria-label="Коротко о работе">
+              <div class="stats__item">
+                <dt class="stats__label">Фокус</dt>
+                <dd class="stats__value">AI‑визуалы + дизайн‑система</dd>
+              </div>
+              <div class="stats__item">
+                <dt class="stats__label">Результат</dt>
+                <dd class="stats__value">стильно, быстро, в задачу</dd>
+              </div>
+              <div class="stats__item">
+                <dt class="stats__label">Форматы</dt>
+                <dd class="stats__value">соцсети, реклама, презентации</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="hero__card" aria-label="Превью">
+            <div class="glass">
+              <div class="glass__top">
+                <div class="avatar" aria-hidden="true"></div>
+                <div class="glass__meta">
+                  <div class="glass__name">Ольга</div>
+                  <div class="glass__role">AI‑дизайнер</div>
+                </div>
+                <div class="pill">Диплом</div>
+              </div>
+              <div class="grid-preview" aria-hidden="true">
+                <div class="tile tile--a"></div>
+                <div class="tile tile--b"></div>
+                <div class="tile tile--c"></div>
+                <div class="tile tile--d"></div>
+                <div class="tile tile--e"></div>
+                <div class="tile tile--f"></div>
+              </div>
+              <div class="glass__bottom">
+                <div class="hint">Готова обсудить задачу и предложить 2–3 идеи.</div>
+                <a class="btn btn--primary btn--sm" href="#contacts">Связаться</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="section__title">Обо мне</h2>
+            <p class="section__lead">
+              Работаю на стыке дизайна и генеративных инструментов: создаю
+              визуальные решения, которые поддерживают смысл и продают.
+            </p>
+          </div>
+
+          <div class="cards">
+            <article class="card">
+              <h3 class="card__title">Дипломированный специалист</h3>
+              <p class="card__text">
+                Понимаю основы композиции, типографики и визуальной иерархии —
+                чтобы AI‑результат выглядел как дизайн, а не как случайная
+                генерация.
+              </p>
+            </article>
+            <article class="card">
+              <h3 class="card__title">AI‑подход</h3>
+              <p class="card__text">
+                Генерация — это инструмент. Я формулирую задачу, задаю стиль,
+                дорабатываю и привожу материалы к единым правилам бренда.
+              </p>
+            </article>
+            <article class="card">
+              <h3 class="card__title">Коммуникация</h3>
+              <p class="card__text">
+                Быстро задаю уточняющие вопросы, фиксирую договорённости и
+                выдаю результат в понятных форматах (PNG/JPG/PDF/исходники).
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="section section--alt">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="section__title">Услуги</h2>
+            <p class="section__lead">
+              Подберу формат под задачу: от одного визуала до пакета материалов.
+            </p>
+          </div>
+
+          <div class="services">
+            <div class="service">
+              <div class="service__top">
+                <h3 class="service__title">AI‑визуалы для соцсетей</h3>
+                <span class="service__tag">посты · сторис · обложки</span>
+              </div>
+              <ul class="service__list">
+                <li>Единый стиль, сетки и типографика</li>
+                <li>Серия 6–12 визуалов</li>
+                <li>Адаптации под форматы</li>
+              </ul>
+            </div>
+            <div class="service">
+              <div class="service__top">
+                <h3 class="service__title">Креативы для рекламы</h3>
+                <span class="service__tag">баннеры · офферы · A/B</span>
+              </div>
+              <ul class="service__list">
+                <li>2–3 направления на тест</li>
+                <li>Читабельные композиции</li>
+                <li>Подготовка под площадки</li>
+              </ul>
+            </div>
+            <div class="service">
+              <div class="service__top">
+                <h3 class="service__title">Презентации и упаковка</h3>
+                <span class="service__tag">PDF · Keynote · PPTX</span>
+              </div>
+              <ul class="service__list">
+                <li>Структура + визуальная подача</li>
+                <li>Шаблон, который можно масштабировать</li>
+                <li>Пакет иконок/иллюстраций при необходимости</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="process" class="section">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="section__title">Как проходит работа</h2>
+            <p class="section__lead">
+              Прозрачно и по шагам — чтобы вы понимали, что будет дальше.
+            </p>
+          </div>
+
+          <ol class="steps">
+            <li class="step">
+              <div class="step__num">01</div>
+              <div>
+                <h3 class="step__title">Бриф</h3>
+                <p class="step__text">
+                  Цель, аудитория, референсы, ограничения, дедлайн. Если
+                  референсов нет — помогу собрать.
+                </p>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step__num">02</div>
+              <div>
+                <h3 class="step__title">Концепты</h3>
+                <p class="step__text">
+                  2–3 варианта направления: стиль, цвет, композиция. Выбираем
+                  лучший и усиливаем.
+                </p>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step__num">03</div>
+              <div>
+                <h3 class="step__title">Доработка</h3>
+                <p class="step__text">
+                  Вычищаю детали, делаю типографику и привожу серию к единому
+                  визуальному языку.
+                </p>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step__num">04</div>
+              <div>
+                <h3 class="step__title">Передача файлов</h3>
+                <p class="step__text">
+                  Вы получаете готовые материалы в нужных размерах и форматах.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="portfolio" class="section section--alt">
+        <div class="container">
+          <div class="section__head section__head--row">
+            <div>
+              <h2 class="section__title">Портфолио</h2>
+              <p class="section__lead">
+                Основные кейсы и подборки — в Telegram.
+              </p>
+            </div>
+            <a
+              class="btn btn--primary"
+              href="https://t.me/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Открыть портфолио
+            </a>
+          </div>
+
+          <div class="portfolio-grid" aria-label="Превью работ">
+            <div class="work work--1"><span class="work__label">Концепт</span></div>
+            <div class="work work--2"><span class="work__label">Реклама</span></div>
+            <div class="work work--3"><span class="work__label">Посты</span></div>
+            <div class="work work--4"><span class="work__label">Обложки</span></div>
+            <div class="work work--5"><span class="work__label">Презентация</span></div>
+            <div class="work work--6"><span class="work__label">Серия</span></div>
+          </div>
+
+          <p class="note">
+            Замените ссылку `https://t.me/` на вашу реальную ссылку на портфолио в
+            Telegram.
+          </p>
+        </div>
+      </section>
+
+      <section id="contacts" class="section">
+        <div class="container">
+          <div class="contact">
+            <div class="contact__left">
+              <h2 class="section__title">Давайте обсудим задачу</h2>
+              <p class="section__lead">
+                Напишите в Telegram — задам пару вопросов и предложу формат
+                работы.
+              </p>
+              <div class="contact__actions">
+                <a
+                  class="btn btn--primary"
+                  href="https://t.me/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Написать в Telegram
+                </a>
+                <a class="btn btn--ghost" href="#top">Наверх</a>
+              </div>
+              <p class="tiny">
+                Обычно отвечаю в течение дня. Можно прикрепить референсы и
+                примерные сроки.
+              </p>
+            </div>
+
+            <div class="contact__right">
+              <div class="contact-card">
+                <div class="contact-card__row">
+                  <span class="contact-card__k">Роль</span>
+                  <span class="contact-card__v">AI‑дизайнер</span>
+                </div>
+                <div class="contact-card__row">
+                  <span class="contact-card__k">Статус</span>
+                  <span class="contact-card__v">Берусь за проекты</span>
+                </div>
+                <div class="contact-card__row">
+                  <span class="contact-card__k">Портфолио</span>
+                  <span class="contact-card__v">
+                    <a href="https://t.me/" target="_blank" rel="noreferrer">
+                      Telegram‑канал
+                    </a>
+                  </span>
+                </div>
+                <div class="divider" aria-hidden="true"></div>
+                <p class="tiny">
+                  Если хотите — пришлю 2–3 варианта визуального направления под
+                  вашу нишу уже на старте.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p class="footer__text">© <span id="year"></span> Ольга · AI‑дизайнер</p>
+        <a class="footer__link" href="#top">Наверх</a>
+      </div>
+    </footer>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>
+
