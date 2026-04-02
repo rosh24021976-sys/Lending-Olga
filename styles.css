@@ -191,6 +191,28 @@ button{ font: inherit; color: inherit; }
   gap: 26px;
   align-items: start;
 }
+
+.hero__left{
+  display:flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.hero__photoWrap{
+  border-radius: 30px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  overflow:hidden;
+  height: clamp(360px, 45vw, 560px);
+}
+.hero__photo{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 20%;
+  display:block;
+  transform: translateZ(0);
+}
 .badge{
   display:inline-flex;
   align-items:center;
@@ -272,12 +294,25 @@ button{ font: inherit; color: inherit; }
   width: 44px;
   height: 44px;
   border-radius: 16px;
+  position: relative;
+  overflow: hidden;
   background:
     linear-gradient(135deg, rgba(124,92,255,.85), rgba(34,211,238,.75)),
     radial-gradient(18px 18px at 30% 30%, rgba(255,255,255,.7), transparent 60%);
   border: 1px solid rgba(255,255,255,.18);
 }
 [data-theme="light"] .avatar{ border: 1px solid rgba(0,0,0,.10); }
+
+.avatar__img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+  opacity: 0;
+  transform: scale(1.06);
+  filter: blur(6px) saturate(1.08) contrast(1.05);
+}
 .glass__meta{ flex: 1; }
 .glass__name{ font-weight: 700; letter-spacing: -.2px; }
 .glass__role{ color: var(--muted); font-size: 13px; margin-top: 2px; }
@@ -604,6 +639,14 @@ button{ font: inherit; color: inherit; }
   transform: translateY(0);
   filter: blur(0);
 }
+
+.reveal.is-visible .avatar__img{
+  animation: avatarIn .65s var(--ease) both, avatarFloat 5s ease-in-out 1.05s infinite;
+}
+
+.reveal.is-visible .hero__photoWrap{
+  animation: photoFloat 7.5s ease-in-out 1.05s infinite;
+}
 .reveal.is-visible .card,
 .reveal.is-visible .service,
 .reveal.is-visible .step{
@@ -620,6 +663,29 @@ button{ font: inherit; color: inherit; }
 @keyframes popIn{
   from{ transform: translateY(10px) scale(.99); opacity: .001; }
   to{ transform: translateY(0) scale(1); opacity: 1; }
+}
+
+@keyframes avatarIn{
+  from{
+    opacity: 0;
+    transform: scale(1.10);
+    filter: blur(8px) saturate(1) contrast(1);
+  }
+  to{
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0) saturate(1.08) contrast(1.05);
+  }
+}
+
+@keyframes avatarFloat{
+  0%,100%{ transform: translateY(0) scale(1); }
+  50%{ transform: translateY(-3px) scale(1); }
+}
+
+@keyframes photoFloat{
+  0%,100%{ transform: translateY(0) scale(1); }
+  50%{ transform: translateY(-3px) scale(1.005); }
 }
 @keyframes gridDrift{
   0%{ transform: translate3d(0,0,0) rotate(0.001deg); }
